@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazinga!</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+
+    <link href="{{ url_for( 'static' , filename='material-kit.css' )}}" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-info">
+
+        <div class="container " style="display: flex;justify-content: center;">
+
+            <div class="navbar-translate">
+                <a class=" navbar-brand " href=" #0" style="font-weight: 400;
+                font-family: 'Spicy Rice', cursive;
+                text-transform: uppercase;
+
+                        font-size: 2em;">Bazinga!!</a>
+
+            </div>
+
+        </div>
+
+    </nav>
+    <div class="container ">
+        <div class="card" style="width: 90%;">
+            <div class="card-body ">
+                <h6 class="card-category text-info">
+                    Enter A News Headline
+                </h6>
+                <h4 class="card-title">
+                    <a href="#pablo">Check for Sarcasm</a>
+                </h4>
+            </div>
+            <div class="card-footer mb-4">
+
+
+                <div class="media-body" style="width: 100%;">
+                    <form action="/" method="POST">
+                        <input type="text" class="form-control" name='s'>
+                        <div class=" media-footer">
+                            <button type="submit" class="btn btn-info btn-wd float-right">Check</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+        {% if a %}
+        <div class="card" style="width: 90%;">
+            <div class="card-footer ">
+
+
+                <div class="media-body" style="width: 100%;">
+                    <div class="card-body ">
+                        <h6 class="card-category text-danger">
+                            Result
+                        </h6>
+                        <h4 class="card-title">
+                            <a href="#pablo">{{a}}</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        {% endif %}
+
+    </div>
+</body>
+
+</html>
